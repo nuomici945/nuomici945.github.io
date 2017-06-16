@@ -6,7 +6,7 @@ $(document).ready(function() {
 	
 	var obj = {//在线音乐数据
 		name: ['fire-2NE1', '银の龙の背に乗って', '暖暖-梁静茹', 'Officially Missing You-Tamia', '孤独患者-陈奕迅'],
-		url: ['http://14.215.93.19/m10.music.126.net/20170615185735/1fea4a6b2e1ab3569a2676a69501265b/ymusic/d5e1/bf7d/9570/0010281aa17562de704214d10f35d455.mp3?wshc_tag=0&wsts_tag=59426243&wsid_tag=716d2be5&wsiphost=ipdbm', 'http://14.215.93.25/m10.music.126.net/20170615194902/c3d1c8127d46d7bd706b340071a11b4e/ymusic/a33e/2a51/0cde/8bc8be7ae156c28bbf6f8e8f49220540.mp3?wshc_tag=0&wsts_tag=59426e53&wsid_tag=716d2be5&wsiphost=ipdbm', 'http://14.215.93.25/m10.music.126.net/20170615195106/a544b474d19ddbfcfedc4810ecd54625/ymusic/101f/02d0/4c23/d95247a7de901df7b22f33564bd5d5f9.mp3?wshc_tag=0&wsts_tag=59426ece&wsid_tag=716d2be5&wsiphost=ipdbm', 'http://14.215.231.155/m10.music.126.net/20170615195243/c7d55ca2a8c4361798e3bef360bef600/ymusic/0600/9985/aced/5050b7cca4b8f972d96e7daeb7741323.mp3?wshc_tag=0&wsts_tag=59426f2f&wsid_tag=716d2be5&wsiphost=ipdbm', 'http://14.215.100.129/m10.music.126.net/20170615195339/190e2b49f8ab1da537167e33791b68ec/ymusic/9564/3bb4/be78/69511d4a81bf11f86343027f32a8e7cc.mp3?wshc_tag=0&wsts_tag=59426f67&wsid_tag=716d2be5&wsiphost=ipdbm']
+		url: ['http://14.215.93.19/m10.music.126.net/20170615185735/1fea4a6b2e1ab3569a2676a69501265b/ymusic/d5e1/bf7d/9570/0010281aa17562de704214d10f35d455.mp3?wshc_tag=0&wsts_tag=59426243&wsid_tag=716d2be5&wsiphost=ipdbm','http://14.215.231.155/m10.music.126.net/20170616110148/a8db1f6cbb1a987b958e0d7a6826eab5/ymusic/9fb2/48b2/be4c/de12a7464fcb38b9ccef8930bd0e4066.mp3?wshc_tag=0&wsts_tag=59434440&wsid_tag=716d2af9&wsiphost=ipdbm','http://14.215.93.25/m10.music.126.net/20170616110216/ece803f42f65aa63681741d4c7bb5371/ymusic/101f/02d0/4c23/d95247a7de901df7b22f33564bd5d5f9.mp3?wshc_tag=0&wsts_tag=5943445c&wsid_tag=716d2af9&wsiphost=ipdbm','http://14.215.231.155/m10.music.126.net/20170616110239/857e832b3343ce6f842a7a3568ec3f38/ymusic/0600/9985/aced/5050b7cca4b8f972d96e7daeb7741323.mp3?wshc_tag=0&wsts_tag=59434473&wsid_tag=716d2af9&wsiphost=ipdbm','http://14.215.93.23/m10.music.126.net/20170616110325/5b3bf180b17926f5986a639bb698557c/ymusic/9564/3bb4/be78/69511d4a81bf11f86343027f32a8e7cc.mp3?wshc_tag=0&wsts_tag=594344a1&wsid_tag=716d2af9&wsiphost=ipdbm']
 	}
 
 	var next = $('.forward'); //上一首
@@ -25,6 +25,7 @@ $(document).ready(function() {
 			$('.audio').remove();
 
 		}
+		getTime() 
 		initAudio(index);
 	})
 	drap(mouse);//拖拽调用
@@ -66,6 +67,7 @@ $(document).ready(function() {
 				$(document).unbind('mouseup');
 				var time = (mouseX / parent) * audio.duration;
 				audio.currentTime = time;
+				getTime()
 			})
 			}
 			
