@@ -8,9 +8,7 @@ $(document).ready(function() {
 		name: ['fire-2NE1', '银の龙の背に乗って', '暖暖-梁静茹', 'Officially Missing You-Tamia', '孤独患者-陈奕迅'],
 		url: ['http://14.215.93.19/m10.music.126.net/20170615185735/1fea4a6b2e1ab3569a2676a69501265b/ymusic/d5e1/bf7d/9570/0010281aa17562de704214d10f35d455.mp3?wshc_tag=0&wsts_tag=59426243&wsid_tag=716d2be5&wsiphost=ipdbm','http://14.215.231.155/m10.music.126.net/20170616110148/a8db1f6cbb1a987b958e0d7a6826eab5/ymusic/9fb2/48b2/be4c/de12a7464fcb38b9ccef8930bd0e4066.mp3?wshc_tag=0&wsts_tag=59434440&wsid_tag=716d2af9&wsiphost=ipdbm','http://14.215.93.25/m10.music.126.net/20170616110216/ece803f42f65aa63681741d4c7bb5371/ymusic/101f/02d0/4c23/d95247a7de901df7b22f33564bd5d5f9.mp3?wshc_tag=0&wsts_tag=5943445c&wsid_tag=716d2af9&wsiphost=ipdbm','http://14.215.231.155/m10.music.126.net/20170616110239/857e832b3343ce6f842a7a3568ec3f38/ymusic/0600/9985/aced/5050b7cca4b8f972d96e7daeb7741323.mp3?wshc_tag=0&wsts_tag=59434473&wsid_tag=716d2af9&wsiphost=ipdbm','http://14.215.93.23/m10.music.126.net/20170616110325/5b3bf180b17926f5986a639bb698557c/ymusic/9564/3bb4/be78/69511d4a81bf11f86343027f32a8e7cc.mp3?wshc_tag=0&wsts_tag=594344a1&wsid_tag=716d2af9&wsiphost=ipdbm']
 	}
-
-	var next = $('.forward'); //上一首
-	var prev = $('.backward'); //下一首
+    var index = null;
 	var musicTime = $('.music-time');
 	var nowTimeBox = $('.current-time');
 	var musciName = $('.musicN');
@@ -20,7 +18,7 @@ $(document).ready(function() {
 	var audioCurrent = null;
 	var audioDuration = null;
 	play.on('click', function() {
-		var index = $(this).index();
+		index = $(this).index();
 		if($('.audio')) {
 			$('.audio').remove();
 
@@ -107,7 +105,7 @@ $(document).ready(function() {
 		}
 	})
 
-	var initAudio = function(index) { //创建一个mp3媒体；
+	var initAudio = function() { //创建一个mp3媒体；
 		clearInterval(time); //清楚定时器
 		musciName.html();
 		audio = new Audio();
@@ -212,5 +210,27 @@ $(document).ready(function() {
 			
 		})
 	}
-
+	//切换歌曲
+	var next = $('.forward'); //下一首
+	var prev = $('.backward'); //上一首
+     next.on('click',function(){
+     	if(audio!=null){
+     		index++;
+     		if(index>4){
+     			index=4
+     		}
+     		initAudio()
+     	}
+     	
+     })
+      prev.on('click',function(){
+     	if(audio!=null){
+     		index--;
+     		if(index<0){
+     		     index=0
+     		}
+     		initAudio()
+     	}
+     	
+     })
 })
