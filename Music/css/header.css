@@ -44,10 +44,12 @@ header{
     background-size: cover;
 }
 .logo{
-	position: absolute;
+	/*position: absolute;
     top: 22px;
-    left: 50%;
-    margin-left: -37px;
+    left: 50%;*/
+   float: left;
+    margin-left: 40px;
+    margin-top: 20px;
     outline: none;
 }
 .logo img{
