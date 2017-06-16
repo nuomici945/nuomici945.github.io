@@ -1,0 +1,182 @@
+.login-bg {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	opacity: 0;
+}
+.login{
+	position: relative;
+	display: none;
+	}
+
+.login-bg,
+.user-logining {
+	position: fixed;
+	background: #fff;
+}
+
+.user-logining {
+	left: 50%;
+	top: 40%;
+	z-index: 999;
+	width: 530px;
+	height: 389px;
+	margin-left: -265px;
+	margin-top: -194px;
+	box-shadow: 0 2px 54px rgba(0, 0, 0, .3);
+	border-radius: 4px;
+}
+
+.user-logining>p {
+	height: 60px;
+	line-height: 60px;
+	background: #f4f4f4;
+	font-size: 16px;
+	color: #999;
+	padding-left: 28px;
+}
+
+.areacode:after {
+	content: '';
+	position: absolute;
+	width: 8.21px;
+	height: 5.56px;
+	background: url(../img/down-arrow.png) no-repeat;
+	background-size: 8.21px 5.56px;
+	top: 6px;
+	right: 8px;
+}
+
+
+.close-btn {
+	position: absolute;
+	right: 17px;
+	top: 22px;
+	width: 17px;
+	height: 16px;
+	background: url(../img/remove.png) no-repeat;
+	cursor: pointer;
+}
+.user-logining .login-title {
+	width: 243px;
+	margin: 35px auto 5px;
+}
+.user-logining .login-title span {
+	display: inline-block;
+	font-size: 18px;
+	color: #666;
+	line-height: 22px;
+	margin: 0 10px;
+	cursor: pointer;
+}
+.user-logining .login-title .login-phone {
+	color: #6ed56c;
+}
+.white-space {
+	font-size: 14px;
+	width: 303px;
+	height: 18px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.user-logining .phone-area {
+	width: 316px;
+	border: 1px solid #e8e8e8;
+	line-height: 50px;
+	border-radius: 4px;
+}
+.user-logining .login-btn,
+.user-logining input {
+	display: block;
+	-webkit-appearance: none;
+	outline: 0;
+}
+.user-logining .phone-area,
+.user-logining input {
+	height: 40px;
+	margin: 0 auto 22px;
+	font-size: 14px;
+	color: #666;
+}
+.user-logining input {
+	width: 300px;
+	padding-left: 14px;
+	border-radius: 4px;
+	line-height: 40px;
+	border: 1px solid #e8e8e8;
+}
+.user-logining .login-btn {
+	width: 300px;
+	height: 40px;
+	line-height: 45px;
+	border-radius: 4px;
+	background: #6ed56c;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px auto 0;
+	cursor: pointer;
+	border: none;
+}
+.phone-area p {
+	position: relative;
+	float: left;
+	margin-top: 10px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 30px 0 10px;
+	cursor: pointer;
+	border-right: 1px solid #e8e8e8;
+}
+.phone-area input {
+	float: left;
+	-webkit-appearance: none;
+	border: none;
+	outline: 0;
+	width: 200px;
+	padding-left: 10px;
+	border-radius: 4px;
+	line-height: 40px;
+}
+.other-login {
+	width: 465px;
+	height: 30px;
+	margin: 34px auto 0;
+}
+.other-login .other-login-method {
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	color: #999;
+	font-size: 14px;
+}
+.user-logining .other-login .weibo-btn,
+.user-logining .other-login .weixin-btn {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url(../img/weibo.png) no-repeat;
+	text-indent: -99em;
+}
+.user-logining .other-login .weixin-btn {
+	background: url(../img/wetchat.png) no-repeat;
+	margin-left: 30px;
+}
+.forget-reg {
+	float: right;
+	height: 14px;
+	line-height: 14px;
+	margin-top: 10px;
+}
+.user-logining .forget-reg a {
+    display: inline-block;
+    font-size: 14px;
+    color: #999;
+}
+.user-logining .forget-reg a.reg {
+    color: #6ed56c;
+    border-left: 1px solid #e8e8e8;
+    padding-left: 10px;
+}

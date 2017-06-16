@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/music-box.css" />
+		<link rel="stylesheet" type="text/css" href="css/left-common-.css" />
+		<link rel="stylesheet" type="text/css" href="css/user-login.css" />
+		<script src="js/jquery-2.2.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/header.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user-login.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/music-play.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+
+	<body>
+
+		<div class="app">
+			<main id="main-app">
+				<header class="clearfix">
+					<div class="header-nav-left">
+						<a href="javascript:;" class="headphone">echo耳机</a>
+						<a href="javascript:;">好友圈</a>
+						<a href="javascript:;" class="active">发现</a>
+						<a href="javascript:;">频道</a>
+						<a href="javascript:;">金币&会员</a>
+						<a href="javascript:;">客户端</a>
+						<a href="javascript:;">回声嘉年华</a>
+						<a href="javascript:;">商城</a>
+					</div>
+					<a href="javascript:;" class="logo">
+						<img src="img/2c35330d407d3f6edb9d09a4ce563da9.png" />
+					</a>
+					<div class="user-login">
+						<a href="javascript:;">登录</a>
+					</div>
+					<a href="javascript:;" class="upload-composition">上传作品</a>
+					<div class="echo-search">
+						<input type="text" name="" id="" value="" placeholder="搜索内容" />
+					</div>
+				</header>
+				<div class="login">
+					<div class="login-bg">
+
+					</div>
+					<div class="user-logining">
+						<p>请先登录</p>
+						<i class="close-btn"></i>
+						<div class="login-title">
+							<span class="login-phone">手机号登录</span><span>邮箱登录</span>
+						</div>
+						<div class="white-space">
+
+						</div>
+						<div class="phone-area">
+							<p class="areacode">+86</p> <input type="text" placeholder="请输入手机号码" name="username" class="phone">
+						</div>
+						<input type="password" placeholder="输入密码" class="password">
+						<button type="submit" class="login-btn">登录</button>
+						<div class="other-login">
+							<div class="other-login-method">其他登录方式：
+								<a title="使用微博帐号登录" href="https://api.weibo.com/oauth2/authorize?client_id=1221031326&response_type=code&redirect_uri=http%3A%2F%2Fwww.app-echo.com%2Findex%2Fopen-login%3Fplatform%3Dsina&xoauth_displayname=My%20Application&scope=profile%20email" target="_blank" class="weibo-btn">微博登录</a>
+								<a title="使用微信帐号登录" href="https://open.weixin.qq.com/connect/qrconnect?appid=wx363eb6cb5bee002b&response_type=code&redirect_uri=http%3A%2F%2Fwww.app-echo.com%2Findex%2Fopen-login%3Fplatform%3Dwechat&state=e4c5deebf0f2eb814017bc32e987de87&scope=snsapi_login" target="_blank" class="weixin-btn">微信登录</a>
+							</div>
+							<div class="forget-reg">
+								<a href="javascript:;" target="_blank" class="forget-password">忘记密码？</a>
+								<a href="javascript:;" target="_blank" class="reg">立即注册</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<main class="clearfix">
+					<div class="main-center clearfix">
+						<!--<div class="loading-animation">
+						</div>-->
+						<section class="main-left">
+							<div class="music-type clearfix">
+								<a href="javascript:;" class="music">
+									<div class="music-img music-img1">
+
+									</div>
+									<img src="img/FihFH8LDnuyoy3DT29RCoqQrRmwn.gif" alt="" />
+									<div class="mask">
+
+									</div>
+									<div class="music-name">
+										午后红茶
+									</div>
+								</a>
+								<a href="javascript:;" class="music">
+									<div class="music-img music-img2">
+
+									</div>
+									<img src="img/FnCtO76a5Cs7PrIbE90QIy6ybjYI.gif" alt="" />
+									<div class="mask">
+
+									</div>
+									<div class="music-name">
+										工作学习
+									</div>
+								</a>
+								<a href="javascript:;" class="music">
+									<div class="music-img music-img3">
+
+									</div>
+									<img src="img/FuMDECcEhbAWAOzQiSl5XTXnZpY3.gif" alt="" />
+									<div class="mask">
+
+									</div>
+									<div class="music-name">
+										深夜居酒屋
+									</div>
+								</a>
+								<a href="javascript:;" class="music">
+									<div class="music-img music-img4">
+
+									</div>
+									<img src="img/FiFPKdgKFd-8UH5Rnyy3LInH6OUZ.gif" alt="" />
+									<div class="mask">
+
+									</div>
+									<div class="music-name">
+										周末聚会
+									</div>
+								</a>
+								<a href="javascript:;" class="music">
+									<div class="music-img music-img5">
+
+									</div>
+									<img src="img/Fi0kOU7PN6q-y2KGhu0urOM5uGFI.gif" alt="" />
+									<div class="mask">
+
+									</div>
+									<div class="music-name">
+										放松心情
+									</div>
+								</a>
+							</div>
+							<div class="common sound-hot">
+								<div class="big-title">
+									<span class="fl">热门回声榜</span>
+									<span class="fr"><a href="javascript:;">进入榜单</a></span>
+								</div>
+								<div class="sound-list clearfix">
+									<div class="sound-left clearfix">
+										<div class="sound-list-left">
+											<a href="javascript:;"><img class="tittle-bg" src="img/b6718ed159e896bde882ba27b7b98015.png" /></a>
+											<a href="javascript:;"><img class="sound-bg" src="img/FoWNRAnYbvD4b9kZU0LffneKDdoC.jpg" /></a>
+										</div>
+										<div class="sound-list-right">
+											<span>TOP 1</span>
+											<a href="">
+												<p>颠覆男声改编Taylor Swift「Bad Blood」</p>
+											</a>
+											<div class="user-info clearfix">
+												<a href=""><img src="img/3adb487fd5cd633ac4253bd973b8cf54cec666e7.jpg" />
+													<span>Devy</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="sound-right">
+										<ul>
+											<li>
+												<a href="javascript:;"><img src="img/FhbRQIk1wignHO_rNgcIfmtQdjyJ.jpg" alt="" /></a>
+												<div class="sound-info">
+													<div class="title clearfix"><i class="index">2</i>
+														<a href="javascript:;"><span>小清新鼓点节奏-The Hanging Tree</span></a>
+													</div>
+													<a href="javascript:;">
+														<p>LINDE</p>
+													</a>
+												</div>
+											</li>
+
+											<li>
+												<a href="javascript:;"><img src="img/Fn1qxT-OTBoqWjdZC328ULpPRgvy.jpg" alt="" /></a>
+												<div class="sound-info">
+													<div class="title clearfix"><i class="index">3</i>
+														<a href="javascript:;"><span>双声道「Million Reasons 」你我之间总是有太多理由</span></a>
+													</div>
+													<a href="javascript:;">
+														<p>滚滚大人</p>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="common sound-origin">
+
+								<div class="big-title">
+									<span class="fl">原创回声榜</span>
+									<span class="fr"><a href="javascript:;">进入榜单</a></span>
+								</div>
+								<div class="sound-list clearfix">
+									<div class="sound-left clearfix">
+										<div class="sound-list-left">
+											<a href="javascript:;"><img class="tittle-bg" src="img/5735c4af669429c7b43cbd3fe165d0bf.png" /></a>
+											<a href="javascript:;"><img class="sound-bg" src="img/Fg1qqVIopVXJbR1KFFhrVeGxogn9 (1).jpg" /></a>
+										</div>
+										<div class="sound-list-right">
+											<span>TOP 1</span>
+											<a href="">
+												<p>【中文ASMR】耳部大保健（耳搔Through闲聊）</p>
+											</a>
+											<div class="user-info clearfix">
+												<a href=""><img src="img/3f1008d9a8307acf7808417ec32f37a48916eb99.jpg" />
+													<span>Agony的晚安呢喃</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="sound-right">
+										<ul>
+											<li>
+												<a href="javascript:;"><img src="img/FpkXO5ygnZE_TjMu1fSJHL0gCVfz.jpg" alt="" /></a>
+												<div class="sound-info">
+													<div class="title clearfix"><i class="index">2</i>
+														<a href="javascript:;"><span>原创钢琴「Layee」Pianoboy</span></a>
+													</div>
+													<a href="javascript:;">
+														<p>Pianoboy高至豪</p>
+													</a>
+												</div>
+											</li>
+
+											<li>
+												<a href="javascript:;"><img src="img/FlNijaNBecmuxQFC7OqF_GPDK1rf.jpg" alt="" /></a>
+												<div class="sound-info">
+													<div class="title clearfix"><i class="index">3</i>
+														<a href="javascript:;"><span>凭什么说</span></a>
+													</div>
+													<a href="javascript:;">
+														<p>不靠谱组合</p>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+							<div class="common echo-mv">
+
+								<div class="big-title">
+									<span class="fl">视频回声榜</span>
+									<span class="fr"><a href="javascript:;">进入榜单</a></span>
+								</div>
+								<div class="sound-list clearfix">
+									<div class="sound-left clearfix">
+										<div class="sound-list-left">
+											<a href="javascript:;"><img class="tittle-bg" src="img/06b1c58597a0447c6c68c4c1505663cd.png" /></a>
+											<a href="javascript:;"><img class="sound-bg" src="img/FkzVQp6qu1Tl50ILTTKRtc-QiTDn.jpg" /></a>
+										</div>
+										<div class="sound-list-right">
+											<span>TOP 1</span>
+											<a href="">
+												<p>张碧晨献声「明月几时有」主题曲「曾经守候」 三主角谱乱世儿女情</p>
+											</a>
+											<div class="user-info clearfix">
+												<a href=""><img src="img/FpwLn0cl87xkOacXxvFLWCwEB4Et.jpg" />
+													<span>echo娱乐</span></a>
+											</div>
+										</div>
+									</div>
+									<div class="sound-right">
+										<ul>
+											<li>
+												<a href="javascript:;"><img src="img/lr62dydxL3P8hHBO6znwmMcQ3bQX.jpg" alt="" /></a>
+												<div class="sound-info">
+													<div class="title clearfix"><i class="index">2</i>
+														<a href="javascript:;"><span>戴荃献唱电影《大护法》同名印象曲 “以歌写英雄”又一力作</span></a>
+													</div>
+													<a href="javascript:;">
+														<p>戴荃</p>
+													</a>
+												</div>
+											</li>
+
+											<li>
+												<a href="javascript:;"><img src="img/FgPY1iYxMgJjAe1CMYwfNPAqou0K.png" alt="" /></a>
+												<div class="sound-info">
+													<div class="title clearfix"><i class="index">3</i>
+														<a href="javascript:;"><span>让你久等了，已经38岁的经典科幻怪兽“异形”系列终于出续集了！</span></a>
+													</div>
+													<a href="javascript:;">
+														<p>echo娱乐</p>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+							<div class="echo-celebrity">
+								<div class="big-title">
+									<span class="fl">echo名人</span>
+									<span class="fr"><a href="javascript:;">查看全部</a></span>
+								</div>
+								<ul class="clearfix people">
+									<li>
+										<a href="javascript:;"><img src="img/celebrity/2f85b573e90d692a5f55e7e56bc979ab.png" /></a>
+										<a href="javascript:;"><span class="vip">夏雨</span></a>
+										<a href="javascript:;"><em class="follow">17866人</em><em>关注</em></a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="img/celebrity/faed6a318449b2836bcd632f39ef01ac.png" /></a>
+										<a href="javascript:;"><span class="vip">华晨宇</span></a>
+										<a href="javascript:;"><em class="follow">26654人</em><em>关注</em></a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="img/celebrity/FmJwPn-MEDCqvNy4-9lLRG25JW_q.jpg" /></a>
+										<a href="javascript:;"><span class="vip">李宇春</span></a>
+										<a href="javascript:;"><em class="follow">129281人</em><em>关注</em></a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="img/celebrity/Fq6kQpSBGC1IwE0qIHHDevyf7FHQ.jpg" /></a>
+										<a href="javascript:;"><span class="vip">陈楚生</span></a>
+										<a href="javascript:;"><em class="follow">85108人</em><em>关注</em></a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="img/celebrity/true.png" /></a>
+										<a href="javascript:;"><span class="vip">薛之谦</span></a>
+										<a href="javascript:;"><em class="follow">67116人</em><em>关注</em></a>
+									</li>
+								</ul>
+							</div>
+							<div class="special">
+
+								<div class="big-title">
+									<span class="fl">专辑</span>
+									<span class="fr"><a href="javascript:;">查看全部</a></span>
+								</div>
+								<ul class="special-list clearfix">
+									<li>
+										<a href="javascript:;"><img src="img/special/Ft9ipE2v__n8UWcRIjj9X_-l2axx.jpg" alt="" />
+											<p>君是山</p>
+											<p>戴荃</p>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="img/special/FpdaJZ5hVcgfjlC26TAmsUKW_Vgu.jpg" alt="" />
+											<p>The Cure</p>
+											<p>Lady Gaga</p>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="img/special/Fo5ztgMr7lP5eKydUHJWB-h33gKE.jpg" alt="" />
+											<p>Stay Together</p>
+											<p>Noah Cyrus</p>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;"><img src="img/special/FokzTHybhkiE-ZOTv8ZCNnnTypgR.jpg" alt="" />
+											<p>问题餐厅 配乐原声带 Vol.1</p>
+											<p>梁晓雪</p>
+										</a>
+									</li>
+								</ul>
+
+							</div>
+							<div class="echo-recommend">
+								<div class="big-title">
+									<span class="fl">今日推荐</span>
+									<i>一键播放</i>
+								</div>
+								<ul class="echomore-box clearfix">
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="img/recommend/true.jpg" />
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="img/recommend/2.jpg" />
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="img/recommend/true2.gif" />
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="img/recommend/4.jpg" />
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/07/10/fdf750dea3910eef.jpg!/fwfh/200x200/unsharp/true" />
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/09/28/4e89695555d536a6.jpg!/fwfh/200x200/unsharp/true" />
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-qn-echo-watermark-image-cdn.app-echo.com/187e5bc52055b68a0796f81b95d0307ef68054c4.gif?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/200/q/100">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/2014/9/1411199431.png!/fwfh/200x200/unsharp/true">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+                                     <li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://al-qn-echo-image-cdn.app-echo.com/FoD6y1vcs9O1i5Yqv6jlNV0DAewv?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/200/q/100">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/10/01/643963454817f232.jpg!/fwfh/200x200/unsharp/true">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/09/30/1e399a3df4b1e9d2.gif!/fwfh/200x200/unsharp/true">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/10/01/aaef08a238bbf4f3.jpg!/fwfh/200x200/unsharp/true">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/10/03/eacca3de78974936.png!/fwfh/200x200/unsharp/true">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/09/13/fc1ace3a5888ceab.jpg!/fwfh/200x200/unsharp/true">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/09/28/3163920f8eed4834.jpg!/fwfh/200x200/unsharp/true">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									<li class="echomore">
+										<div class="status-pic">
+											<a href="javascript:;">
+												<img src="https://qn-up-kibey-echo-cdn.app-echo.com/poster/2014/10/06/522fcd0664491cb9.jpg!/fwfh/200x200/unsharp/true">
+											</a>
+											<div class="duration">
+												<i class="musci-paly-btn"></i> 06:01
+											</div>
+										</div>
+										<a href="javascript:;" class="sound-name">特别悲伤的不是爱情</a>
+										<h4><a href="javascript:;">最爱OST</a>频道</h4>
+										<ul class="status-list clearfix">
+											<li><i class="share"></i><span>427</span></li>
+											<li><i class="status-like"></i><span>3502</span></li>
+											<li><i class="status-comment"></i><span>421</span></li>
+										</ul>
+									</li>
+									
+								</ul>
+								<div class="feed-list-more">加载更多</div>
+							</div>
+						</section>
+						<section class="main-right">
+							<div class="main-right-box">
+								<h3>每日精选<i>播放全部</i></h3>
+								<div class="handpick clearfix">
+									<a href="javascript:;">
+										<div class="pic"><img src="https://qn-qn-echo-image-cdn.app-echo.com/FoSSQPwE24qnfk10A7kVWST-dRm1?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>千与千寻 always with me 五种音效3D环绕</h4>
+											<h5>3D音乐奇幻旋律馆</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://qn-qn-echo-image-cdn.app-echo.com/FuAURemAnAD_Sgxu0ouzF_m3MYXE?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>果断爱上50分钟欧美音乐串烧</h4>
+											<h5>运动的时候听什么</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://ws-qn-echo-image-cdn.app-echo.com/Fu1dLDsQN4tRF4uZjDs5TWscJHLs?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>「双声道版」Call me maybe</h4>
+											<h5>双声道联袂馆</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://ws-qn-echo-image-cdn.app-echo.com/Fh9QdUk2Ed_GNN2yqeFXexUA6RSq?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>「3D交响版」卡农</h4>
+											<h5>3D音乐奇幻旋律馆</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://qn-qn-echo-image-cdn.app-echo.com/FgDnMJlIJWI3jzzO77PS6y3U6RBE?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>What Are Words 3D音效版</h4>
+											<h5>3D音乐奇幻旋律馆</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://ws-qn-echo-image-cdn.app-echo.com/Fo-uIBPSEPDeSko5-_RZOachZxqj?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>「双声道版」男左女右 Don't </h4>
+											<h5>双声道联袂馆</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://al-qn-echo-image-cdn.app-echo.com/Fim0lywIrVPer4wdyNJlzoJm3b-I?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>愿逝者 魂归故里 Coming Home 纯女声独唱版</h4>
+											<h5>一不开心就戴耳机</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://qn-qn-echo-image-cdn.app-echo.com/FhJiDTcui8T52ykGA71wUWZmcWZX?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>伤感女声演绎「不要说话」</h4>
+											<h5>雅马哈 | 高手在民间</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://ws-qn-echo-image-cdn.app-echo.com/FhT78Wwr6Oqo0BoJp7Pd5tqnzaQe?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>运动必备 超强节奏感≈</h4>
+											<h5>运动的时候听什么</h5></div>
+									</a>
+									<a href="javascript:;">
+										<div class="pic"><img src="https://ws-qn-echo-image-cdn.app-echo.com/Fo2S9QCvTjsOtskNvFvk4kgbD63m?imageMogr2/auto-orient/quality/100%7CimageView2/0/w/100/q/100"></div>
+										<div class="hgroup">
+											<h4>「双声道版」Back to December</h4>
+											<h5>双声道联袂馆</h5></div>
+									</a>
+								</div>
+							</div>
+						</section>
+					</div>
+				</main>
+				<footer></footer>
+				<div class="music-box">
+					<div class="panel-left">
+						<i class="btn icon-step-backward  icon-2x backward"></i>
+						<i class="btn icon-step-forward icon-2x forward"></i>
+						<button class="icon-play icon-large play"></button>
+					</div>
+					<div class="panel-center">
+						<a href="javescript:;">
+							<img src="img/f0fc26f17b1b61a73540d0297f7cca71.png" />
+						</a>
+						<span class="musicN">echo回声</span>
+						<div class="current-time">
+							0:00
+						</div>
+						<div class="progress music-control">
+							<div class="progress-bar  progress-bar-success music-bar" role="progressbar" style="width: 0%;">
+
+							</div>
+							<div class="display-mouse">
+
+							</div>
+
+						</div>
+						<div class="music-time">0:00</div>
+					</div>
+					<div class="panel-right">
+						<i class="icon-refresh radom"></i>
+						<i class="icon-heart-empty like"></i>
+						<i class="icon-trash unlike"></i>
+						<div class="music-volume">
+							<div class="music-border">
+								<i class="icon-volume-down volume"></i>
+								<div class="volume-control">
+									<div class="volume-content">
+										<p></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<i class="icon-music music-icon"></i>
+					</div>
+				</div>
+
+			</main>
+
+		</div>
+
+	</body>
+
+</html>

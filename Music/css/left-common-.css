@@ -1,0 +1,157 @@
+.big-title{
+    height: 28px;
+    line-height: 28px;
+    font-size: 24px;
+    color: #666;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.fr a{
+	font-size: 16px;
+    color: #6ed56c;
+}
+.sound-list{
+	    margin-top: 19px;
+	    height: 150px;
+}
+.tittle-bg{
+	float: left;
+    width: 90px;
+    height: 150px;
+    margin-right: 5px;
+}
+.sound-bg{
+	float: left;
+	width: 150px;
+	height: 150px;
+}
+.sound-list-right{
+	float: left;
+    width: 182px;
+    height: 150px;
+    background:url(../img/8f312322ba5b76a63e77aaf3bc7bad8d.png);
+    margin-left: -10px;
+}
+.sound-list .sound-list-right>span{
+	display: block;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 17px 0 0 20px;
+}
+.sound-hot .sound-list .sound-list-right>span{
+    color: #f49c9c;
+}
+.sound-origin .sound-list .sound-list-right>span{
+	 color: #75bbe1;
+}
+.echo-mv .sound-list .sound-list-right>span{
+	color: #7496d2;
+}
+.sound-left{
+	float: left;
+}
+.sound-list-left{
+	float: left;
+}
+.sound-list-right p{
+	font-size: 14px;
+    line-height: 20px;
+    width: 143px;
+    height: 39px;
+    color: #666;
+    margin: 10px auto 28px;
+    overflow: hidden;
+}
+.user-info{
+	margin-left: 20px;
+}
+.user-info a img{
+	float: left;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+}
+.user-info a span{
+	float: left;
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+    line-height: 22px;
+    width: 114px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.sound-right{
+	float: right;
+}
+.sound-right ul{
+	    height: 150px;
+}
+.sound-right ul li{
+	    height: 50%;
+}
+.sound-right ul li a img{
+	float: left;
+    width: 73px;
+    height: 73px;
+    object-fit: cover;
+}
+.sound-info{
+	    float: left;
+    width: 197px;
+    height: 71px;
+    border: 1px solid #f4f4f4;
+}
+.sound-info .title{
+	width: 175px;
+    position: relative;
+    margin: 8px auto 3px;
+}
+.sound-right .sound-info .index{
+	position: absolute;
+    left: 2px;
+    top: 1px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+}
+.sound-hot .sound-right .sound-info .index{
+	 background: #f49c9c;
+}
+.sound-origin .sound-right .sound-info .index{
+	background: #75bbe1;
+}
+.echo-mv .sound-right .sound-info .index{
+	background: #7496d2;
+}
+.title a span{
+	display: inline-block;
+    width: 171px;
+    height: 37px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #666;
+    text-indent: 1.8em;
+    overflow: hidden;
+}
+.sound-info a p{
+	color: #999;
+    font-size: 12px;
+    line-height: 12px;
+    width: 160px;
+    margin-left: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
