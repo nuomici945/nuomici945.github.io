@@ -335,7 +335,9 @@ h3.profile-title {
 .main-navigation li a.active:hover {
   background: #495461;
 }
-
+.link{
+	display: block;
+}
 .social-icons {
   display: block;
   padding: 30px 40px;

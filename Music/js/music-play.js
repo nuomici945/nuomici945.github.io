@@ -3,12 +3,9 @@ $(document).ready(function() {
 	var wholeIndex = $('body');
 	var mouse = $('.display-mouse');
 	var musicBar = $('.music-bar');
-	
-	var obj = {//在线音乐数据
-		name: ['fire-2NE1', '银の龙の背に乗って', '暖暖-梁静茹', 'Officially Missing You-Tamia', '孤独患者-陈奕迅'],
-		url: ['http://14.215.93.19/m10.music.126.net/20170615185735/1fea4a6b2e1ab3569a2676a69501265b/ymusic/d5e1/bf7d/9570/0010281aa17562de704214d10f35d455.mp3?wshc_tag=0&wsts_tag=59426243&wsid_tag=716d2be5&wsiphost=ipdbm','http://14.215.231.155/m10.music.126.net/20170616110148/a8db1f6cbb1a987b958e0d7a6826eab5/ymusic/9fb2/48b2/be4c/de12a7464fcb38b9ccef8930bd0e4066.mp3?wshc_tag=0&wsts_tag=59434440&wsid_tag=716d2af9&wsiphost=ipdbm','http://14.215.93.25/m10.music.126.net/20170616121351/1cb5c7234624fbc07195ddf5b1e55d14/ymusic/101f/02d0/4c23/d95247a7de901df7b22f33564bd5d5f9.mp3?wshc_tag=0&wsts_tag=59435523&wsid_tag=3d8c3ee1&wsiphost=ipdbm','http://14.215.231.155/m10.music.126.net/20170616110239/857e832b3343ce6f842a7a3568ec3f38/ymusic/0600/9985/aced/5050b7cca4b8f972d96e7daeb7741323.mp3?wshc_tag=0&wsts_tag=59434473&wsid_tag=716d2af9&wsiphost=ipdbm','http://14.215.93.23/m10.music.126.net/20170616110325/5b3bf180b17926f5986a639bb698557c/ymusic/9564/3bb4/be78/69511d4a81bf11f86343027f32a8e7cc.mp3?wshc_tag=0&wsts_tag=594344a1&wsid_tag=716d2af9&wsiphost=ipdbm']
-	}
-    var index = null;
+	var name = ['龙卷风-周杰伦', '告白气球-周杰伦', '甜甜的-周杰伦', '简单爱-周杰伦', '孤独患者-陈奕迅'];
+	var id =['http://win.web.ra03.sycdn.kuwo.cn/eaab8f60c383ef67a6b73358e28acfe4/59464e2d/resource/a1/10/15/1350039900.aac','http://win.web.rh03.sycdn.kuwo.cn/143e415413ac2a3127b4487e699b2bef/59464e4f/resource/a2/43/30/221665476.aac','http://win.web.ra03.sycdn.kuwo.cn/f6690ef601a1cacce927b616271c797d/59464da9/resource/a3/7/34/586624080.aac','http://win.web.ra03.sycdn.kuwo.cn/20557cc1711525b54e5d022b3bf2974d/59464e97/resource/a2/48/63/31/257131110.aac','http://win.web.ra03.sycdn.kuwo.cn/c91401e294c7aa7d0c8c2d51ff6e9369/59464ec0/resource/a2/24/22/2717942438.aac'];
+	var index = null;
 	var musicTime = $('.music-time');
 	var nowTimeBox = $('.current-time');
 	var musciName = $('.musicN');
@@ -17,66 +14,96 @@ $(document).ready(function() {
 	var audio = null;
 	var audioCurrent = null;
 	var audioDuration = null;
+//	
+//	function getAjax(index) {
+//      
+//			$.ajax({
+//				type: "get",
+//				dataType: "jsonp",
+//				url: "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.catalogSug&query="+name[index],
+//				jsonp: "callback",
+//				success: function(data) {
+//					  
+//                   arr.push(data.song[0].songid)
+//                   console.log(arr)
+//         			loadMusic()
+//         			
+//				},
+//				
+//			})
+//	}
+//	function loadMusic(){
+//		var arr2 =[];
+//		$.ajax({
+//				type: "get",
+//				dataType: "jsonp",
+//				url: "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+arr[0],
+//				jsonp: "callback",
+//				success: function(data) {
+//					arr2.push(data.bitrate.file_link)
+//                   
+//				},
+//			})
+//		
+//		
+//	}
 	play.on('click', function() {
 		index = $(this).index();
 		if($('.audio')) {
 			$('.audio').remove();
 
 		}
-		getTime() 
+		
+		getTime()
 		initAudio();
 	})
-	
-	
-	drap(mouse);//拖拽调用
 
-	function drap(obj) {//拖拽进度条
+	drap(mouse); //拖拽调用
+
+	function drap(obj) { //拖拽进度条
 		obj.on('mousedown', function(ev) {
 			var parent = obj.parent().innerWidth();
 			var x = ev.pageX - obj.position().left;
-			ev.preventDefault()//阻止浏览器默认行为
+			ev.preventDefault() //阻止浏览器默认行为
 			clearInterval(time);
 			var mouseX = null;
-			if(audio!=null){
+			if(audio != null) {
 				audioCurrent = audio.currentTime;
 				$(document).on('mousemove', function(ev) {
-				mouseX = ev.pageX - x;
-				if(mouseX < 0) {
-					mouseX = 0;
-				}
-				if(mouseX >= parent) {
-					mouseX = parent;
-				}
+					mouseX = ev.pageX - x;
+					if(mouseX < 0) {
+						mouseX = 0;
+					}
+					if(mouseX >= parent) {
+						mouseX = parent;
+					}
 
-				obj.css({
-					'left': mouseX + 'px',
+					obj.css({
+						'left': mouseX + 'px',
+
+					});
+					musicTime.html()
+					musicBar.css('width', mouseX + 'px');
+					musicBar.css('transition', 'none');
+
+					nowTimeBox.html(getSpeedTime(mouseX, parent)); //获取拖拽时的音乐时间
+
+					ev.preventDefault() //阻止浏览器默认行为
 
 				});
-				musicTime.html()
-				musicBar.css('width', mouseX + 'px');
-				musicBar.css('transition', 'none');
-
-				nowTimeBox.html(getSpeedTime(mouseX, parent));//获取拖拽时的音乐时间
-				
-				ev.preventDefault()//阻止浏览器默认行为
-			
-
-			});
-			$(document).on('mouseup', function() {
-				$(document).unbind('mousemove');
-				$(document).unbind('mouseup');
-				var time = (mouseX / parent) * audio.duration;
-				audio.currentTime = time;
-				getTime()
-			})
+				$(document).on('mouseup', function() {
+					$(document).unbind('mousemove');
+					$(document).unbind('mouseup');
+					var time = (mouseX / parent) * audio.duration;
+					audio.currentTime = time;
+					getTime()
+				})
 			}
-			
-			
+
 		})
 	}
 
-	
-	function getSpeedTime(mouseX, parent) {//快进的时间获取
+	function getSpeedTime(mouseX, parent) { //快进的时间获取
 		var time = (mouseX / parent) * audio.duration;
 		time = Math.floor(parseInt(time))
 		var ss = time % 60;
@@ -112,12 +139,12 @@ $(document).ready(function() {
 		musciName.html();
 		audio = new Audio();
 		audio.className = 'audio';
-		audio.src = obj.url[index]
+		audio.src = id[index];
 		wholeIndex.append(audio);
 		totalTime(audio)
 		audio.play();
 		autoPlay.removeClass('icon-play').addClass('icon-pause');
-		musciName.html(obj.name[index])
+		musciName.html(name[index])
 		getTime(audio);
 
 	}
@@ -129,7 +156,7 @@ $(document).ready(function() {
 		}, 1000);
 	}
 
-	function speedMusic() {//控制进度条
+	function speedMusic() { //控制进度条
 		audioCurrent = audio.currentTime;
 		var time = Math.floor(parseInt(audioCurrent))
 
@@ -149,7 +176,7 @@ $(document).ready(function() {
 		nowTimeBox.html(str);
 	}
 
-	function totalTime() {//获取音乐总时长
+	function totalTime() { //获取音乐总时长
 		clearInterval(timer);
 		timer = setInterval(function() {
 			var second = audio.duration / 60;
@@ -176,66 +203,66 @@ $(document).ready(function() {
 	}
 	//控制音乐声音
 	var vCBtn = $('.volume-control');
-	var icon =  $('.volume-content p');
-	var musicCir =$('.volume-cir')
-    var mute = $('.volume')
-		volumeControl()
+	var icon = $('.volume-content p');
+	var musicCir = $('.volume-cir')
+	var mute = $('.volume')
+	volumeControl()
 
-	function volumeControl(){
-		vCBtn.on('mousedown',function(ev){
-			var x =ev.pageX-icon.width();
-			ev.preventDefault()//阻止浏览器默认行为
-			$(document).on('mousemove',function(ev){
-				var length=ev.pageX-x
-				if(length>=90){
-					length =90
+	function volumeControl() {
+		vCBtn.on('mousedown', function(ev) {
+			var x = ev.pageX - icon.width();
+			ev.preventDefault() //阻止浏览器默认行为
+			$(document).on('mousemove', function(ev) {
+				var length = ev.pageX - x
+				if(length >= 90) {
+					length = 90
 				}
-				if(length<=0){
-					length=0;
+				if(length <= 0) {
+					length = 0;
 					mute.removeClass('icon-volume-down').addClass('icon-volume-off')
 				}
-				if(length>0){
+				if(length > 0) {
 					mute.removeClass('icon-volume-off').addClass('icon-volume-down')
 				}
-				if(audio!=null){
-					audio.volume = length/icon.parent().width()
+				if(audio != null) {
+					audio.volume = length / icon.parent().width()
 				}
-//				console.log(length/icon.parent().width())
+				//				console.log(length/icon.parent().width())
 
-				icon.css('width',length+'px');
-				ev.preventDefault()//阻止浏览器默认行为
+				icon.css('width', length + 'px');
+				ev.preventDefault() //阻止浏览器默认行为
 			})
-			$(document).on('mouseup',function(){
+			$(document).on('mouseup', function() {
 				$(document).unbind('mousemove');
 				$(document).unbind('mouseup');
 			})
-			
+
 		})
 	}
 	//切换歌曲
 	var next = $('.forward'); //下一首
 	var prev = $('.backward'); //上一首
-     next.on('click',function(){
-     	if(audio!=null){
-     		$('.audio').remove();
-     		index++;
-     		if(index>4){
-     			index=4
-     		}
-     		initAudio()
-     		getTime() 
-     	}
-     	
-     })
-      prev.on('click',function(){
-     	if(audio!=null){
-     		$('.audio').remove();
-     		index--;
-     		if(index<0){
-     		     index=0
-     		}
-     		initAudio()
-     		getTime() 
-     	}
-     })
+	next.on('click', function() {
+		if(audio != null) {
+			$('.audio').remove();
+			index++;
+			if(index > 4) {
+				index = 0
+			}
+			initAudio()
+			getTime()
+		}
+
+	})
+	prev.on('click', function() {
+		if(audio != null) {
+			$('.audio').remove();
+			index--;
+			if(index < 0) {
+				index = 4
+			}
+			initAudio()
+			getTime()
+		}
+	})
 })

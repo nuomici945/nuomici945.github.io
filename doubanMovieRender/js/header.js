@@ -22,7 +22,5 @@ $(document).ready(function() {
 	})
 
     
-//https://movie.douban.com/j/subject_suggest?q=
-//https://api.douban.com/v2/book/search?q=php&count=3&callback=fn
-//v2/movie/subject
-///v2/movie/coming_soon
+//https://movie.douban.com/j/subject_suggest?q= 豆瓣电影api搜索
+//https://api.douban.com/v2/book/search?q=php&count=3&callback=fn 豆瓣图书搜索api
