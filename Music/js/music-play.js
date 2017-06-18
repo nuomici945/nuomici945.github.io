@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var mouse = $('.display-mouse');
 	var musicBar = $('.music-bar');
 	var name = ['龙卷风-周杰伦', '告白气球-周杰伦', '甜甜的-周杰伦', '简单爱-周杰伦', '孤独患者-陈奕迅'];
-	var id =['http://win.web.ra03.sycdn.kuwo.cn/eaab8f60c383ef67a6b73358e28acfe4/59464e2d/resource/a1/10/15/1350039900.aac','http://win.web.rh03.sycdn.kuwo.cn/143e415413ac2a3127b4487e699b2bef/59464e4f/resource/a2/43/30/221665476.aac','http://win.web.ra03.sycdn.kuwo.cn/f6690ef601a1cacce927b616271c797d/59464da9/resource/a3/7/34/586624080.aac','http://win.web.ra03.sycdn.kuwo.cn/20557cc1711525b54e5d022b3bf2974d/59464e97/resource/a2/48/63/31/257131110.aac','http://win.web.ra03.sycdn.kuwo.cn/c91401e294c7aa7d0c8c2d51ff6e9369/59464ec0/resource/a2/24/22/2717942438.aac'];
+	var id = ['http://win.web.ra03.sycdn.kuwo.cn/eaab8f60c383ef67a6b73358e28acfe4/59464e2d/resource/a1/10/15/1350039900.aac', 'http://win.web.rh03.sycdn.kuwo.cn/143e415413ac2a3127b4487e699b2bef/59464e4f/resource/a2/43/30/221665476.aac', 'http://win.web.ra03.sycdn.kuwo.cn/f6690ef601a1cacce927b616271c797d/59464da9/resource/a3/7/34/586624080.aac', 'http://win.web.ra03.sycdn.kuwo.cn/20557cc1711525b54e5d022b3bf2974d/59464e97/resource/a2/48/63/31/257131110.aac', 'http://win.web.ra03.sycdn.kuwo.cn/c91401e294c7aa7d0c8c2d51ff6e9369/59464ec0/resource/a2/24/22/2717942438.aac'];
 	var index = null;
 	var musicTime = $('.music-time');
 	var nowTimeBox = $('.current-time');
@@ -14,46 +14,46 @@ $(document).ready(function() {
 	var audio = null;
 	var audioCurrent = null;
 	var audioDuration = null;
-//	
-//	function getAjax(index) {
-//      
-//			$.ajax({
-//				type: "get",
-//				dataType: "jsonp",
-//				url: "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.catalogSug&query="+name[index],
-//				jsonp: "callback",
-//				success: function(data) {
-//					  
-//                   arr.push(data.song[0].songid)
-//                   console.log(arr)
-//         			loadMusic()
-//         			
-//				},
-//				
-//			})
-//	}
-//	function loadMusic(){
-//		var arr2 =[];
-//		$.ajax({
-//				type: "get",
-//				dataType: "jsonp",
-//				url: "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+arr[0],
-//				jsonp: "callback",
-//				success: function(data) {
-//					arr2.push(data.bitrate.file_link)
-//                   
-//				},
-//			})
-//		
-//		
-//	}
+	//	
+	//	function getAjax(index) {
+	//      
+	//			$.ajax({
+	//				type: "get",
+	//				dataType: "jsonp",
+	//				url: "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.catalogSug&query="+name[index],
+	//				jsonp: "callback",
+	//				success: function(data) {
+	//					  
+	//                   arr.push(data.song[0].songid)
+	//                   console.log(arr)
+	//         			loadMusic()
+	//         			
+	//				},
+	//				
+	//			})
+	//	}
+	//	function loadMusic(){
+	//		var arr2 =[];
+	//		$.ajax({
+	//				type: "get",
+	//				dataType: "jsonp",
+	//				url: "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.song.play&songid="+arr[0],
+	//				jsonp: "callback",
+	//				success: function(data) {
+	//					arr2.push(data.bitrate.file_link)
+	//                   
+	//				},
+	//			})
+	//		
+	//		
+	//	}
 	play.on('click', function() {
 		index = $(this).index();
 		if($('.audio')) {
 			$('.audio').remove();
 
 		}
-		
+
 		getTime()
 		initAudio();
 	})
@@ -141,11 +141,12 @@ $(document).ready(function() {
 		audio.className = 'audio';
 		audio.src = id[index];
 		wholeIndex.append(audio);
+
+		getTime(audio);
 		totalTime(audio)
 		audio.play();
 		autoPlay.removeClass('icon-play').addClass('icon-pause');
-		musciName.html(name[index])
-		getTime(audio);
+		musciName.html(name[index]);
 
 	}
 
@@ -153,6 +154,16 @@ $(document).ready(function() {
 		time = setInterval(function() {
 			speedMusic()
 
+			if(audio != null) { //播放完，自动下一首。
+				if(audioCurrent == audioDuration) {
+					$('.audio').remove();
+					index++;
+					if(index > 4) {
+						index = 0
+					}
+					initAudio();
+				}
+			}
 		}, 1000);
 	}
 
@@ -160,7 +171,7 @@ $(document).ready(function() {
 		audioCurrent = audio.currentTime;
 		var time = Math.floor(parseInt(audioCurrent))
 
-		var ss = time % 60;
+		var ss = time % 60; //转为秒
 		var m = Math.floor(time / 60);
 		var str = '';
 		if(ss < 10) {
@@ -179,6 +190,7 @@ $(document).ready(function() {
 	function totalTime() { //获取音乐总时长
 		clearInterval(timer);
 		timer = setInterval(function() {
+			audioDuration = audio.duration;
 			var second = audio.duration / 60;
 			second = second.toFixed(2);
 			var str = second.toString();
@@ -254,7 +266,7 @@ $(document).ready(function() {
 		}
 
 	})
-	prev.on('click', function() {
+	prev.on('click', function() { //上一首
 		if(audio != null) {
 			$('.audio').remove();
 			index--;
@@ -264,5 +276,6 @@ $(document).ready(function() {
 			initAudio()
 			getTime()
 		}
-	})
+	});
+
 })
