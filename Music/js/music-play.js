@@ -53,7 +53,6 @@ $(document).ready(function() {
 			$('.audio').remove();
 
 		}
-
 		getTime()
 		initAudio();
 	})
@@ -107,7 +106,7 @@ $(document).ready(function() {
 		var time = (mouseX / parent) * audio.duration;
 		time = Math.floor(parseInt(time))
 		var ss = time % 60;
-		var m = Math.floor(time / 60);
+		var m = Math.floor(time / 60);//向下取整
 		var str = '';
 		if(ss < 10) {
 			str = m + ":" + "0" + ss;
