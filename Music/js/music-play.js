@@ -57,7 +57,24 @@ $(document).ready(function() {
 		initAudio();
 	})
 
-	drap(mouse); //拖拽调用
+	drap(mouse); //拖拽进度条
+	volumeControl()//控制音乐声音
+	
+	var initAudio = function() { //创建一个mp3媒体；
+		clearInterval(time); //清楚定时器
+		musciName.html();
+		audio = new Audio();
+		audio.className = 'audio';
+		audio.src = id[index];
+		wholeIndex.append(audio);
+
+		getTime(audio);
+		totalTime(audio)
+		audio.play();
+		autoPlay.removeClass('icon-play').addClass('icon-pause');
+		musciName.html(name[index]);
+
+	}
 
 	function drap(obj) { //拖拽进度条
 		obj.on('mousedown', function(ev) {
@@ -133,21 +150,7 @@ $(document).ready(function() {
 		}
 	})
 
-	var initAudio = function() { //创建一个mp3媒体；
-		clearInterval(time); //清楚定时器
-		musciName.html();
-		audio = new Audio();
-		audio.className = 'audio';
-		audio.src = id[index];
-		wholeIndex.append(audio);
-
-		getTime(audio);
-		totalTime(audio)
-		audio.play();
-		autoPlay.removeClass('icon-play').addClass('icon-pause');
-		musciName.html(name[index]);
-
-	}
+	
 
 	function getTime() { //获取媒体的时间以设置进度条长度；
 		time = setInterval(function() {
@@ -217,7 +220,7 @@ $(document).ready(function() {
 	var icon = $('.volume-content p');
 	var musicCir = $('.volume-cir')
 	var mute = $('.volume')
-	volumeControl()
+	
 
 	function volumeControl() {
 		vCBtn.on('mousedown', function(ev) {

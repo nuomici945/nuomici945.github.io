@@ -4,7 +4,4 @@ $(document).ready(function(){
 		channel.removeClass('active');
 		$(this).addClass('active');
 	})
-	
-	
-	
 })
