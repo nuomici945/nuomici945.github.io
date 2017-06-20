@@ -4,7 +4,8 @@ $(document).ready(function() {
 	var mouse = $('.display-mouse');
 	var musicBar = $('.music-bar');
 	var name = ['龙卷风-周杰伦', '告白气球-周杰伦', '甜甜的-周杰伦', '简单爱-周杰伦', '孤独患者-陈奕迅'];
-	var ids =['http://14.119.124.62/m10.music.126.net/20170620143810/a1a622ad816711dd137a8f1ec426b9ba/ymusic/913b/a797/44f9/7946d7ff555364272fcd7fe8bd24ef9d.mp3?wshc_tag=1&wsts_tag=5948bcf8&wsid_tag=716f09bc&wsiphost=ipdbm','http://183.58.18.33/m10.music.126.net/20170620143841/b6edfe4364a96d861fad61fca6f68a6b/ymusic/6e01/a4d4/bbef/2dda07904eb54d44abb278165e1c6ead.mp3?wshc_tag=1&wsts_tag=5948bd17&wsid_tag=716f09bc&wsiphost=ipdbm','http://180.97.217.36/m10.music.126.net/20170620143907/ebae73302bc7e627329a88ade43c0f2e/ymusic/a120/66a6/09c4/4a0124f064ff25f06e5b4b3ea465295e.mp3?wshc_tag=1&wsts_tag=5948bd31&wsid_tag=716f09bc&wsiphost=ipdbm','http://14.215.93.17/m10.music.126.net/20170620143931/4c91729fa14d713f433d1dc3e6087513/ymusic/8718/ca02/b443/fa866a2a86292037ef028e7a5a752984.mp3?wshc_tag=1&wsts_tag=5948bd48&wsid_tag=716f09bc&wsiphost=ipdbm','http://14.215.93.17/m10.music.126.net/20170620143931/4c91729fa14d713f433d1dc3e6087513/ymusic/8718/ca02/b443/fa866a2a86292037ef028e7a5a752984.mp3?wshc_tag=1&wsts_tag=5948bd48&wsid_tag=716f09bc&wsiphost=ipdbm']
+	var id = ['muse/龙卷风.mp3','muse/告白气球.mp3','muse/甜甜的.mp3','muse/简单爱.mp3','muse/孤独患者.mp3'];
+//	var ids =['http://14.119.124.62/m10.music.126.net/20170620143810/a1a622ad816711dd137a8f1ec426b9ba/ymusic/913b/a797/44f9/7946d7ff555364272fcd7fe8bd24ef9d.mp3?wshc_tag=1&wsts_tag=5948bcf8&wsid_tag=716f09bc&wsiphost=ipdbm','http://183.58.18.33/m10.music.126.net/20170620143841/b6edfe4364a96d861fad61fca6f68a6b/ymusic/6e01/a4d4/bbef/2dda07904eb54d44abb278165e1c6ead.mp3?wshc_tag=1&wsts_tag=5948bd17&wsid_tag=716f09bc&wsiphost=ipdbm','http://180.97.217.36/m10.music.126.net/20170620143907/ebae73302bc7e627329a88ade43c0f2e/ymusic/a120/66a6/09c4/4a0124f064ff25f06e5b4b3ea465295e.mp3?wshc_tag=1&wsts_tag=5948bd31&wsid_tag=716f09bc&wsiphost=ipdbm','http://14.215.93.17/m10.music.126.net/20170620143931/4c91729fa14d713f433d1dc3e6087513/ymusic/8718/ca02/b443/fa866a2a86292037ef028e7a5a752984.mp3?wshc_tag=1&wsts_tag=5948bd48&wsid_tag=716f09bc&wsiphost=ipdbm','http://14.215.93.17/m10.music.126.net/20170620143931/4c91729fa14d713f433d1dc3e6087513/ymusic/8718/ca02/b443/fa866a2a86292037ef028e7a5a752984.mp3?wshc_tag=1&wsts_tag=5948bd48&wsid_tag=716f09bc&wsiphost=ipdbm']
 	var index = null;
 	var musicTime = $('.music-time');
 	var nowTimeBox = $('.current-time');
@@ -14,7 +15,6 @@ $(document).ready(function() {
 	var audio = null;
 	var audioCurrent = null;
 	var audioDuration = null;
-
 	play.on('click', function() {
 		index = $(this).index();
 		if($('.audio')) {
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 	drap(mouse); //控制进度条
   	
-
+ 
     
 	function drap(obj) { //拖拽进度条
 		obj.on('mousedown', function(ev) {
@@ -127,7 +127,7 @@ $(document).ready(function() {
 		musciName.html();
 		audio = new Audio();
 		audio.className = 'audio';
-		audio.src = ids[index];
+		audio.src = id[index];
 		wholeIndex.append(audio);
 
 		getTime(audio);
