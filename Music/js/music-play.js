@@ -64,21 +64,7 @@ $(document).ready(function() {
 	drap(mouse); //控制进度条
   	
 
-    	var initAudio = function() { //创建一个mp3媒体；
-		clearInterval(time); //清楚定时器
-		musciName.html();
-		audio = new Audio();
-		audio.className = 'audio';
-		audio.src = id[index];
-		wholeIndex.append(audio);
-
-		getTime(audio);
-		totalTime(audio)
-		audio.play();
-		autoPlay.removeClass('icon-play').addClass('icon-pause');
-		musciName.html(name[index]);
-
-			}
+    
 	function drap(obj) { //拖拽进度条
 		obj.on('mousedown', function(ev) {
 			var parent = obj.parent().innerWidth();
@@ -171,6 +157,22 @@ $(document).ready(function() {
 			}
 		}, 1000);
 	}
+	
+		var initAudio = function() { //创建一个mp3媒体；
+		clearInterval(time); //清楚定时器
+		musciName.html();
+		audio = new Audio();
+		audio.className = 'audio';
+		audio.src = id[index];
+		wholeIndex.append(audio);
+
+		getTime(audio);
+		totalTime(audio)
+		audio.play();
+		autoPlay.removeClass('icon-play').addClass('icon-pause');
+		musciName.html(name[index]);
+
+			}
 
 	function speedMusic() { //控制进度条
 		audioCurrent = audio.currentTime;
