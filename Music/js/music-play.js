@@ -14,24 +14,27 @@ $(document).ready(function() {
 	var audio = null;
 	var audioCurrent = null;
 	var audioDuration = null;
-	//	
-	//	function getAjax(index) {
-	//      
-	//			$.ajax({
-	//				type: "get",
-	//				dataType: "jsonp",
-	//				url: "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.catalogSug&query="+name[index],
-	//				jsonp: "callback",
-	//				success: function(data) {
-	//					  
-	//                   arr.push(data.song[0].songid)
-	//                   console.log(arr)
-	//         			loadMusic()
-	//         			
-	//				},
-	//				
-	//			})
-	//	}
+	
+	
+//	var arr = [];
+//		getAjax(index)
+//		function getAjax(index) {
+//	      
+//				$.ajax({
+//					type: "get",
+//					dataType: "jsonp",
+//					url: "http://tingapi.ting.baidu.com/v1/restserver/ting?method=baidu.ting.search.catalogSug&query="+name[index],
+//					jsonp: "callback",
+//					success: function(data) {
+//						  
+//	                   arr.push(data.song[0].songid)
+//	                   console.log(arr)
+////	         			loadMusic()
+//	         			
+//					},
+//					
+//				})
+//		}
 	//	function loadMusic(){
 	//		var arr2 =[];
 	//		$.ajax({
@@ -47,6 +50,7 @@ $(document).ready(function() {
 	//		
 	//		
 	//	}
+	
 	play.on('click', function() {
 		index = $(this).index();
 		if($('.audio')) {
@@ -57,10 +61,10 @@ $(document).ready(function() {
 		initAudio();
 	})
 
-	drap(mouse); //拖拽进度条
-	volumeControl()//控制音乐声音
-	
-	var initAudio = function() { //创建一个mp3媒体；
+	drap(mouse); //控制进度条
+  	
+
+    	var initAudio = function() { //创建一个mp3媒体；
 		clearInterval(time); //清楚定时器
 		musciName.html();
 		audio = new Audio();
@@ -74,8 +78,7 @@ $(document).ready(function() {
 		autoPlay.removeClass('icon-play').addClass('icon-pause');
 		musciName.html(name[index]);
 
-	}
-
+			}
 	function drap(obj) { //拖拽进度条
 		obj.on('mousedown', function(ev) {
 			var parent = obj.parent().innerWidth();
@@ -134,8 +137,8 @@ $(document).ready(function() {
 		}
 		return str
 	}
-	var autoPlay = $('.play'); //播放按钮
-	autoPlay.on('click', function() { //播放按钮暂停按钮
+	var autoPlay = $('.play'); //音乐状态
+	autoPlay.on('click', function() {
 		if(audio != null) {
 			if(autoPlay.hasClass('icon-play')) {
 
@@ -150,13 +153,13 @@ $(document).ready(function() {
 		}
 	})
 
-	
+
 
 	function getTime() { //获取媒体的时间以设置进度条长度；
 		time = setInterval(function() {
 			speedMusic()
 
-			if(audio != null) { //播放完，自动下一首。
+			if(audio != null) { 
 				if(audioCurrent == audioDuration) {
 					$('.audio').remove();
 					index++;
@@ -221,7 +224,7 @@ $(document).ready(function() {
 	var musicCir = $('.volume-cir')
 	var mute = $('.volume')
 	
-
+ 	volumeControl()//音量控制
 	function volumeControl() {
 		vCBtn.on('mousedown', function(ev) {
 			var x = ev.pageX - icon.width();
