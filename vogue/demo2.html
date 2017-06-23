@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.invogue-bg {
+				width: 685px;
+				margin: 0 auto;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/idangerous.swiper2.7.6.css" />
+		<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.3dflow.css" />
+		<script src="js/jquery-2.2.4.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/idangerous.swiper2.7.6.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/idangerous.swiper.3dflow.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+
+		<div class="swiper-container main">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"> <img src="img/1497865172_VW1VPs.jpg" /></div>
+				<div class="swiper-slide"> <img src="img/1497249412_1BFUq5.jpg" /></div>
+				<div class="swiper-slide"> <img src="img/1496202522_HMdD9m.jpg" /></div>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var mySwiper = new Swiper('.swiper-container', {
+
+				centeredSlides: true,
+				tdFlow: {
+					rotate: 30,
+				}
+			});
+
+		})
+	</script>
+
+</html>
