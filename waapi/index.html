@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.endings {
+				background: #000;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.frame {
+				background: url("http://stash.rachelnabors.com/codepen/alice-waapi/corner_lb.svg") no-repeat left bottom, url("http://stash.rachelnabors.com/codepen/alice-waapi/corner_rb.svg") right bottom no-repeat, url("http://stash.rachelnabors.com/codepen/alice-waapi/corner_lt.svg") left top no-repeat, url("http://stash.rachelnabors.com/codepen/alice-waapi/corner_rt.svg") right top no-repeat, url("http://stash.rachelnabors.com/codepen/alice-waapi/bg-tunnel-border-top.svg") repeat-x 0 -90px, url("http://stash.rachelnabors.com/codepen/alice-waapi/bg-tunnel-border-bottom.svg") repeat-x 100% calc(100%+ 90px), url("http://rachelnabors.com/alice-in-videoland/book/img/bg-tunnel-border-left.svg") repeat-y -90px 0, url("http://rachelnabors.com/alice-in-videoland/book/img/bg-tunnel-border-right.svg") repeat-y calc(100%+ 90px) 100%;
+				box-sizing: border-box;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: 2;
+			}
+			
+			.ending {
+				background: url("http://rachelnabors.com/alice-in-videoland/book/img/bg_tunnel-specks.png"), #6c373f;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.ending,
+			.frame {
+				width: calc(100% - 4em);
+				height: calc(100% - 4em);
+				margin: 2em;
+			}
+			
+			#pool {
+				position: absolute;
+				bottom: -2.5%;
+				right: 10%;
+				width: 80%;
+			}
+			
+			.alice_breakdown {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+				max-width: calc(96.36vh - 2em);
+			}
+			
+			.alice_crying {
+				width: 100%;
+				transform: translateY(-6%);
+			}
+			
+			.tear {
+				position: absolute;
+				top: 28%;
+				left: 64%;
+				width: .75%;
+				z-index: 1;
+			}
+			
+			.tear:nth-child(odd) {
+				top: 30%;
+				left: 60%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="endings">
+			<div class="ending" id="end-in-tears">
+
+				<div class="alice_breakdown">
+					<img id="pool" src="img/pool.svg">
+
+					<img class="tear" id="tear1" src="img/tear1.svg">
+					<img class="tear" id="tear2" src="img/tear2.svg">
+					<img class="tear" id="tear3" src="img/tear3.svg">
+					<img class="tear" id="tear4" src="img/tear4.svg">
+					<img class="tear" id="tear5" src="img/tear5.svg">
+					<img class="tear" id="tear6" src="img/tear6.svg">
+
+					<img class="alice_crying" src="img/alice_crying.svg">
+				</div>
+			</div>
+			<div class="frame"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var tearsFalling = [{
+			transform: 'translate3D(0, 0, 0)'
+		}, {
+			transform: 'translate3D(0, 2850%, 0)'
+		} ];
+
+		var tears = document.querySelectorAll('.tear');
+		tears = Array.prototype.slice.call(tears);
+
+		document.getElementById("pool").animate(
+			[{
+				transform: 'scale(.8)'
+			}, {
+				transform: 'scale(1)'
+			}, ], {
+				duration: 10000,
+				fill: 'forwards'
+			});
+
+		var getRandomMsRange = function(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+
+		tears.forEach(function(el) {
+			el.animate(
+				tearsFalling, {
+					delay: getRandomMsRange(-1000, 2000), 
+					duration: getRandomMsRange(2000, 6000), 
+					iterations: Infinity,
+					easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)"
+				});
+
+		});
+        
+	</script>
+
+</html>
