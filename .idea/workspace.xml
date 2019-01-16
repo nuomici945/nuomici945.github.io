@@ -22,7 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Myresume/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="728">
@@ -31,6 +31,15 @@
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/workspace/blog/config/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -54,6 +63,7 @@
         <option value="$PROJECT_DIR$/weblgl/index.html" />
         <option value="$PROJECT_DIR$/Myresume/index.html" />
         <option value="$PROJECT_DIR$/blog/config/index.js" />
+        <option value="$PROJECT_DIR$/workspace/blog/config/index.js" />
       </list>
     </option>
   </component>
@@ -74,6 +84,24 @@
             <path>
               <item name="nuomici945.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="nuomici945.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nuomici945.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuomici945.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nuomici945.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuomici945.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nuomici945.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nuomici945.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="workspace" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -149,12 +177,12 @@
       <updated>1498439043290</updated>
       <workItem from="1547619043403" duration="369000" />
       <workItem from="1547620053506" duration="62000" />
-      <workItem from="1547620258372" duration="2585000" />
+      <workItem from="1547620258372" duration="2939000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3016000" />
+    <option name="totallyTimeSpent" value="3370000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -167,6 +195,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17175975" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -231,6 +260,13 @@
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workspace/blog/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
         </state>
       </provider>
     </entry>
