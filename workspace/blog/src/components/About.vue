@@ -83,10 +83,15 @@
         width: 0px;
       }
         /deep/.vue-waterfall-easy {
-          a.img-wraper {
+          a.img-inner-box{
             background: white;
+            border-radius: 4px;
+          }
+          a.img-wraper {
+            border-radius: 4px;
             img{
               border: 4px solid white;
+              border-radius: 4px;
             }
 
           }
@@ -96,27 +101,6 @@
           }
 
         }
-    }
-
-    .album-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-
-      .album-item {
-
-      }
-    }
-
-    .image {
-      width: 100%;
-      border: 4px solid #dddddd;
-      margin-bottom: 40px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
     }
   }
 </style>
