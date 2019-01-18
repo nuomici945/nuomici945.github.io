@@ -3,7 +3,7 @@
     <Sider hide-trigger :style="{height: '100vh',width:'22%',maxWidth:'22%',minWidth:'22%'}" class="left-slide">
       <div class="top-section">
         <div class="profile-image">
-          <Avatar src="../../static/img/avatar.png" shape="circle"/>
+          <Avatar src="./static/img/avatar.png" shape="circle"/>
         </div>
         <div class="profile-name">
           <h3>糯米糍 | 个人博客</h3>
