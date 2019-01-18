@@ -27,46 +27,46 @@
       return {
         albumData: [{
           info: "校门口的彩虹",
-          src: "../../static/img/myself/IMG_0497.JPG",
+          src: "./static/img/myself/IMG_0497.JPG",
         },{
           info: "第一次面试成功，回家路上的傍晚",
-          src: "../../static/img/myself/IMG_1194.JPG",
+          src: "./static/img/myself/IMG_1194.JPG",
         },{
           info: "滤镜后的车厢",
-          src: "../../static/img/myself/IMG_5426.JPG",
+          src: "./static/img/myself/IMG_5426.JPG",
         },{
           info: "我是吃可爱多长大的",
-          src: "../../static/img/myself/IMG_5496.JPG",
+          src: "./static/img/myself/IMG_5496.JPG",
         },{
           info: "可爱多本人",
-          src: "../../static/img/myself/IMG_6532.JPG",
+          src: "./static/img/myself/IMG_6532.JPG",
         },{
           info: "热爱运动的我",
-          src: "../../static/img/myself/IMG_0407.JPG",
+          src: "./static/img/myself/IMG_0407.JPG",
         },{
           info: "低抄校门口",
-          src: "../../static/img/myself/IMG_0486.JPG",
+          src: "./static/img/myself/IMG_0486.JPG",
         },{
           info: "地狱西啊！！！",
-          src: "../../static/img/myself/IMG_5447.JPG",
+          src: "./static/img/myself/IMG_5447.JPG",
         },{
           info: "贪吃系列",
-          src: "../../static/img/myself/IMG_0465.JPG",
+          src: "./static/img/myself/IMG_0465.JPG",
         },{
           info: "贪吃系列",
-          src: "../../static/img/myself/IMG_0453.JPG",
+          src: "./static/img/myself/IMG_0453.JPG",
         },{
           info: "贪吃系列",
-          src: "../../static/img/myself/IMG_0466.JPG",
+          src: "./static/img/myself/IMG_0466.JPG",
         },{
           info: "贪吃系列",
-          src: "../../static/img/myself/IMG_0467.JPG",
+          src: "./static/img/myself/IMG_0467.JPG",
         },{
           info: "贪吃系列",
-          src: "../../static/img/myself/IMG_0468.JPG",
+          src: "./static/img/myself/IMG_0468.JPG",
         },{
           info: "贪吃系列",
-          src: "../../static/img/myself/IMG_0470.JPG",
+          src: "./static/img/myself/IMG_0470.JPG",
         }]
       }
     }
